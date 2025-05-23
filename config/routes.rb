@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
-  # root "posts#index"
-  resources :lists, only: [:index, :show, :create, :new, :destroy] do
+  root "lists#index"
+  resources :lists, only: [:show, :create, :new, :delete] do
     resources :bookmarks, only: [:create, :new, :delete]
   end
   resources :bookmarks, only: [:destroy]
