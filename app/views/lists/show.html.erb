@@ -17,7 +17,7 @@
 </ul>
 <br>
 
-<%= link_to "Delete list", root_path(:list),
+<%= link_to "Delete list", list_path(@list),
     data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
   %>
 
